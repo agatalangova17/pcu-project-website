@@ -1,0 +1,173 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap');
+
+:root {
+    
+    font-size: 16px; 
+    line-height: 1.5; 
+}
+
+
+
+
+
+
+
+* { 
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+}
+
+header {
+    height: 100vh;
+    background-image: url('https://picsum.photos/id/668/1000/800');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+header div {
+    width: 100%;
+}
+
+header h1 {
+    color: white; 
+    font-weight: bold; 
+    font-size: 70px;
+}
+
+#intro > div {
+    display: flex;
+    flex-wrap: wrap; 
+    gap: 30px; 
+    background-color: rgb(50, 50, 50);
+    padding: 5rem;
+    margin: auto;
+    justify-content: space-around; 
+}
+
+#intro > div > div {
+    display: flex;
+    flex-direction: column; 
+    align-items: center; 
+    gap: 30px;
+}
+
+#intro h2 {
+    color: white; 
+    font-size: 20px; 
+}
+
+#intro img {
+    width: 130px; 
+    height: auto; 
+}
+
+img {
+    max-width: 100%; 
+    height: auto;
+    display: block;
+}
+
+article {
+    display: flex;
+    align-items: flex-start; 
+    gap: 70px; 
+    padding: 30px; 
+    background-color: #f0f0f0; 
+    font-size: 16px;
+    justify-content: center;
+}
+
+article p {
+    line-height: 2; 
+    max-width: 600px; 
+}
+
+article h1 {
+    margin-top: 40px;
+    margin-bottom: 30px;
+}
+
+article > div:first-child {
+    flex-basis: 30%; 
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+
+article > div:last-child {
+    flex-basis: 50%; 
+}
+
+article.reversed {
+    display: flex;
+    flex-direction: row-reverse;
+}
+
+footer {
+    background-color: #292828;
+    padding: 40px 0;
+    text-align: center; 
+    color: #ffffff; 
+}
+
+.connect-text {
+    margin-bottom: 40px; 
+    font-size: 20px; 
+    font-weight: bold; 
+}
+
+footer ul {
+    list-style: none;
+    display: flex;
+    justify-content: space-around; 
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 0;
+    max-width: 960px; 
+    margin: auto; 
+}
+
+footer ul li a {
+    display: inline-flex;
+    align-items: center;
+}
+
+footer ul li a img {
+    width: 40px;
+    height: auto;
+}
+
+
+@media (max-width: 800px) {
+    #intro > div {
+        flex-direction: column;
+    }
+
+    article, article.reversed {
+        flex-direction: column; 
+        align-items: center; 
+    }
+
+    article > div:first-child, 
+    article > div:last-child,
+    article div:first-child, 
+    article div:last-child {
+        flex-basis: auto; 
+        width: 100%; 
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+
+    footer ul {
+        flex-direction: column;
+        align-items: center;
+    }
+}
