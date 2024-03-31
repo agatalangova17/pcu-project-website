@@ -6,16 +6,14 @@
     line-height: 1.5; 
 }
 
-
-
-
-
-
-
 * { 
     box-sizing: border-box;
     margin: 0;
     padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
 }
 
 body {
@@ -76,6 +74,28 @@ img {
     display: block;
 }
 
+
+
+.intro-block {
+    display: block;
+    text-align: center;
+    transition: transform 0.3s ease;
+    color: white;
+    text-decoration: none;
+}
+
+.intro-block:hover {
+    transform: scale(1.1);
+}
+
+#intro h2, #intro img {
+    transition: transform 0.3s ease;
+    margin-bottom: 20px;
+}
+
+
+
+
 article {
     display: flex;
     align-items: flex-start; 
@@ -111,6 +131,10 @@ article.reversed {
     flex-direction: row-reverse;
 }
 
+
+a {
+    display: block;
+}
 footer {
     background-color: #292828;
     padding: 40px 0;
@@ -170,4 +194,52 @@ footer ul li a img {
         flex-direction: column;
         align-items: center;
     }
+}
+
+.icon {
+    display: block;
+    width: 40px; 
+    height: 40px; 
+    transition: all 0.3s ease-out;
+    cursor: pointer;
+}
+
+.icon path {
+    fill: #ffffff; 
+    transition: fill 0.3s ease-out; 
+}
+
+
+.icon:hover path#facebook {
+    fill: #3b5998; 
+}
+
+
+.icon:hover path#insta {
+    fill: #E1306C; 
+}
+
+a[href*="tiktok.com"] .icon:hover path {
+    fill: #25F4EE; 
+}
+
+
+
+.icon:hover path#twitter {
+    fill: #1DA1F2; 
+}
+
+
+.icon:hover path#linkedin {
+    fill: #0077B5; 
+}
+
+.icon:hover {
+    transform: scale(1.2); 
+}
+
+
+.icon:hover path {
+    fill: #fe0883; 
+    transition: fill 0.3s ease; 
 }
